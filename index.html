@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>天知道</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div id="weatherApp">
+        <div class="logo"><img src="./img/logo.png" alt="logo" title="天知道"></div>
+        <div class="search">
+            <input type="text" class="txt_search" placeholder="输入查询城市" @keyup.enter="searchNew" v-model="newCity">
+            <button class="btn_search" @click="searchNew">查询</button>
+        </div>
+        <div class="hotCity">
+            <a href="javascript:void(0)" @click="changeCity('张家界')">张家界</a>
+            <a href="javascript:void(0)" @click="changeCity('衡阳')">衡阳</a>
+            <a href="javascript:void(0)" @click="changeCity('长沙')">长沙</a>
+            <a href="javascript:void(0)" @click="changeCity('中山')">中山</a>
+        </div>
+        <div class="currentCity"><span>{{ currentCity }}</span>>></div>
+        <ul class="weatherList">
+            <li class="weather" v-for="item in weatherList">
+                <div class="weather_type">{{item.type}}</div>
+                <div class="weather_temp">
+                    <b>{{ item.low }}</b>~<b>{{ item.high }}</b>
+                </div>
+                <div class="weather_wind"> {{ item.fengxiang }} </div>
+                <div class="weather_date">{{ item.date }}</div>
+            </li>
+        </ul>
+        <div class="copyRight">copyRight©2019 xyt</div>
+    </div>
+</body>
+<!-- 官网提供的 axios 在线地址 -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- 引入VUE.JS开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="./js/index.js"></script>
+</html>

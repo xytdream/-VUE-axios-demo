@@ -1,0 +1,26 @@
+*{ margin: 0;padding: 0;}
+ul{list-style: none;}
+a{ text-decoration: none; color: #666666;}
+
+#weatherApp{ margin: 20px auto; width: 800px; text-align: center;position: relative;}
+.logo{ margin: 50px 0; width: 100%;text-align: center;}
+.logo img{ width: 158px;height: 47px;}
+.search{ font-size: 0; width: 620px; border: 1px solid #41a1cb; margin: 0 auto;}
+.search .txt_search{ width: 520px;height: 100%; border: none;outline: none;text-indent: 1em;}
+.search .btn_search{ height: 40px; width: 100px;color: #ffffff;background: #41a1cb;
+    border: none;cursor: pointer;
+}
+.hotCity{ margin-top: 18px;}
+.hotCity a{ margin: 0 5px;}
+.hotCity a:hover{ text-decoration: underline;}
+.currentCity{ margin-top: 80px; position: absolute; left: 30px; color: #41a1cb;}
+.weatherList{ width: 100%;  margin-top: 120px; clear: both;}
+.weatherList .weather{ color: #fda252;font-size: 14px;float: left; width: 100px;
+    padding: 0 28px;border-right: 2px solid #bababa;
+}
+.weatherList .weather:last-child{ border: none;}
+.weatherList .weather .weather_type{ font-size: 30px;}
+.weatherList .weather .weather_temp{ margin-top:30px}
+.weatherList .weather .weather_date{ color: #9fa19f;margin-top:30px} 
+
+.copyRight{ position:absolute; top:550px;left:50%;transform: translateX(-50%);font-size: 8px;}
